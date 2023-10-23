@@ -87,44 +87,34 @@ var finances = [
   ['Feb-2017', 671099],
 ];
 
-
-// The total number of months included in the dataset.
-console.log("The total number of months included in the dataset is: " + finances.length + ".");
-// The net total amount of Profit/Losses over the entire period.
-var profit = 0
-for (i=0; i<finances.length; i++) {
-  profit = profit + finances[i][1];
-}
-console.log("The net total amount of profit is: " + profit + ".")
-// The average of the changes in Profit/Losses over the entire period.
-// You will need to track what the total change in Profit/Losses are from month to month and then find the average.
-// (Total/(Number of months - 1))
-
-//cycle through every month
-//for every month starting with the 2nd , calculate profit difference
-//add them to a total
-//divide that by finances.length - 1 
+var profit = 0;
 var profitChange = 0;
 var changeTotal = 0;
 var greatestIncrease = 0;
-var greatestDeccrease = 0;
+var greatestDecrease = 0;
 var increaseDate;
 var decreaseDate;
+
+console.log("The total number of months included in the dataset is: " + finances.length + ".");
+
+for (i=0; i<finances.length; i++) {
+  profit = profit + finances[i][1];
+}
+console.log("The net total amount of profit is: " + profit + ".");
+
 for (i = 1; i<finances.length; i++) {
   profitChange = finances[i][1] - finances[i-1][1];
   changeTotal = changeTotal + profitChange;
   if (profitChange > greatestIncrease) {
     greatestIncrease = profitChange;
     increaseDate = finances[i][0];
-  } else if (profitChange < greatestDeccrease) {
-    greatestDeccrease = profitChange;
+  } else if (profitChange < greatestDecrease) {
+    greatestDecrease = profitChange;
     decreaseDate = finances[i][0];
   }
 }
-var changeAverage = Math.round(100*(changeTotal/(finances.length - 1)))/100;
-console.log ("The average of the profit changes is: " + changeAverage + ".")
-console.log ("The greatest increase in profit was " + greatestIncrease + " in " + increaseDate + ".")
-console.log ("The greatest decrease in profit was " + greatestDeccrease + " in " + decreaseDate + ".")
-// The greatest increase in Profit/Losses (date and amount) over the entire period.
 
-// The greatest decrease in Profit/Losses (date and amount) over the entire period.
+var changeAverage = Math.round(100*(changeTotal/(finances.length - 1)))/100;
+console.log ("The average of the profit changes is: " + changeAverage + ".");
+console.log ("The greatest increase in profit was " + greatestIncrease + " in " + increaseDate + ".");
+console.log ("The greatest decrease in profit was " + greatestDecrease + " in " + decreaseDate + ".");
