@@ -18,7 +18,7 @@ The algorithm works with a given array containing a series of arrays, each respe
 
 ### Visual 
 
-![Portfolio](images/page-screenshot.png)
+![Console Finances](images/page-screenshot.png)
 
 ## Installation
 No installation needed. 
