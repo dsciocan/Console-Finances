@@ -24,11 +24,11 @@ The algorithm works with a given array containing a series of arrays, each respe
 No installation needed. 
 
 ## Usage
-The page can be accessed through the [following link](https://dsciocan.github.io/Bootstrap-Portfolio).
+The page can be accessed through the [following link](https://dsciocan.github.io/Console-Finances).
 
 To gain access to the page's functionality, you must access the console by:
-* Windows/Linux: Pressing Control + Shift + K.
-* Mac: Pressing Command + Option + K.
+* Windows/Linux: Pressing Ctrl+Shift+J.
+* Mac: Pressing Cmd+Option+J.
 
 It is possible to replace the data used in the code as long as the same format is respected for the 'finances' variable. 
 
